@@ -57,7 +57,7 @@ var ChromeContext = function(iframe,ctaButton){
 var IOSContext = function(iframe,ctaButton){
 	Context.call(this,iframe,ctaButton);
 	this.iframe.parentElement.removeChild(iframe);
-	this.url = "../../webgl/index.html";
+	this.url = "https://tristansmartpixeltv.github.io/ABB_Transformers_WebGL2/main/index.html";
 	var self = this;
 	
 	this.onClick = function(){
