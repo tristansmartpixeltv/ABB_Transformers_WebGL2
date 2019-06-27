@@ -6,7 +6,9 @@
     border-color: rgba(255, 255, 255, 1);
     /*color: rgba(250, 250, 250, 1);*/
     background-color:transparent;
-    
+    display:flex !important;
+    flex-direction:column;
+    align-items:center;
    
     font-weight: bold;
     margin: 0;
@@ -43,6 +45,10 @@
     transform-style: preserve-3d;
     
    
+}
+
+.pin-container-horizontal{
+     flex-direction:row !important;
 }
 
 .pin-container-active{
@@ -85,9 +91,8 @@
 
 .pin-line
 {
-    content: '\00a0';
+   content: '\00a0';
     position: relative;
-    left: 50%;
     
     width: 2px;
     margin-top:0px;
@@ -96,8 +101,14 @@
     z-index: -10;
     letter-spacing:0px;
     
-    
 }
+
+.pin-line-horizontal{
+      width: 60px !important;
+      height: 2px !important;
+}
+
+
 
 .pin-text
 {

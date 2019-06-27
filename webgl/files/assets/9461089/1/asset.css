@@ -172,6 +172,7 @@ body.spin {
     z-index: -10;
 }
 
+/*
 .pin-line-horizontal
 {
     content: '\00a0';
@@ -197,7 +198,7 @@ body.spin {
     z-index: -10;
     display:none;
 }
-
+*/
 
 .pin-link
 {
