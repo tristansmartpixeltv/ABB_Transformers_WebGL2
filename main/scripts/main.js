@@ -50,6 +50,7 @@ var Context = function(iframe,ctaButton){
 var ChromeContext = function(iframe,ctaButton){
 	Context.call(this,iframe,ctaButton);
 	this.iframe.contentWindow.addEventListener('wheel',this.preventDefault, {passive: false}); 
+    this.onClick();
 };
 
 
@@ -71,6 +72,7 @@ var IOSContext = function(iframe,ctaButton){
 var RegularContext = function(iframe,ctaButton){
 	Context.call(this,iframe,ctaButton);
 	this.iframe.contentWindow.addEventListener('wheel',this.preventDefault);
+    this.onClick();
 };
 
 
