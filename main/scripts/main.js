@@ -48,7 +48,22 @@ var Context = function(iframe,ctaButton){
 
 // For Chrome PC Navigators
 var ChromeContext = function(iframe,ctaButton){
+
+
+
 	Context.call(this,iframe,ctaButton);
+
+    this.onClick = function(){
+         var image = document.getElementsByClassName('main-header-content-image')[0];
+         ctaButton.parentElement.removeChild(ctaButton);
+         image.parentElement.removeChild(image);
+         
+         setTimeout(function(){
+                iframe.classList.add('main-header-iframe-enabled');
+         },500);
+         
+    };
+
 	this.iframe.contentWindow.addEventListener('wheel',this.preventDefault, {passive: false}); 
     this.onClick();
 };
@@ -71,6 +86,17 @@ var IOSContext = function(iframe,ctaButton){
 // For the remaining navigators
 var RegularContext = function(iframe,ctaButton){
 	Context.call(this,iframe,ctaButton);
+    this.onClick = function(){
+         var image = document.getElementsByClassName('main-header-content-image')[0];
+         ctaButton.parentElement.removeChild(ctaButton);
+         image.parentElement.removeChild(image);
+         
+         setTimeout(function(){
+                iframe.classList.add('main-header-iframe-enabled');
+         },500);
+         
+    };
+    
 	this.iframe.contentWindow.addEventListener('wheel',this.preventDefault);
     this.onClick();
 };
