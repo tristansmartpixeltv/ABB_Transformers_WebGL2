@@ -60,7 +60,7 @@ var ChromeContext = function(iframe,ctaButton){
          
          setTimeout(function(){
                 iframe.classList.add('main-header-iframe-enabled');
-         },500);
+         },1000);
          
     };
 
@@ -93,10 +93,10 @@ var RegularContext = function(iframe,ctaButton){
          
          setTimeout(function(){
                 iframe.classList.add('main-header-iframe-enabled');
-         },500);
+         },1000);
          
     };
-    
+
 	this.iframe.contentWindow.addEventListener('wheel',this.preventDefault);
     this.onClick();
 };
